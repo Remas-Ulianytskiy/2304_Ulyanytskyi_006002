@@ -27,16 +27,16 @@ protected:
 	string information;
 
 public:
-	Person(int id, int passport_number, int birthday, const string& first_name, const string& second_name, const string& information)
+	Person(int id, int passport_number, int birthday, const string first_name, const string second_name, const string information)
 		: id(id), passport_number(passport_number), birthday(birthday), first_name(first_name), second_name(second_name), information(information)
 	{}
 
 	void set_id(int id) { this->id = id; }
 	void set_passport_number(int passport_number) { this->passport_number = passport_number; }
 	void set_birthday(int birthday) { this->birthday = birthday; }
-	void set_first_name(string& first_name) { this->first_name = first_name; }
-	void set_second_name(string& second_name) { this->second_name = second_name; }
-	void set_information(string& information) { this->information = information; }
+	void set_first_name(string first_name) { this->first_name = first_name; }
+	void set_second_name(string second_name) { this->second_name = second_name; }
+	void set_information(string information) { this->information = information; }
 
 	int get_id() const { return id; }
 	int get_passport_number() const { return passport_number; }
@@ -53,15 +53,15 @@ protected:
 	string group;
 
 public:
-	Student(int id, int passport_number, int birthday, const string& first_name, const string& second_name, const string& information,
-		const string& institution, const string& specialization, const string& group)
+	Student(int id, int passport_number, int birthday, const string first_name, const string second_name, const string information,
+		const string institution, const string specialization, const string group)
 		: Person(id, passport_number, birthday, first_name, second_name, information),
 		institution(institution), specialization(specialization), group(group)
 	{}
 
-	void set_institution(string& institution) { this->institution = institution; }
-	void set_specialization(string& specialization) { this->specialization = specialization; }
-	void set_group(string& group) { this->group = group; }
+	void set_institution(string institution) { this->institution = institution; }
+	void set_specialization(string specialization) { this->specialization = specialization; }
+	void set_group(string group) { this->group = group; }
 
 	string get_institution() const { return institution; }
 	string get_specialization() const { return specialization; }
